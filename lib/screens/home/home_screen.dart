@@ -1,6 +1,7 @@
 import 'package:drone/constants.dart';
 import 'package:drone/controllers/navbar_controllers.dart';
 import 'package:drone/models/card_item_model.dart';
+import 'package:drone/utils.dart';
 import 'package:drone/widgets/card_item.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -130,27 +131,32 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(height: 5.0,),
                     Padding(
                       padding: EdgeInsets.all(5.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      child: Column(
                         children: [
-                           Text(
-                            'The excuted command',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w500,
-                              height: 1.5,
-                              letterSpacing: 2,
-                              fontSize: 16.0,
-                            ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                               Text(
+                                'The excuted command',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  height: 1.5,
+                                  letterSpacing: 2,
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                              Text(
+                                'Turning Left',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  height: 1.5,
+                                  letterSpacing: 2,
+                                  fontSize: 16.0,
+                                ),
+                              ),
+                            ],
                           ),
-                          Text(
-                            'Turning Left',
-                            style: TextStyle(
-                              fontWeight: FontWeight.w700,
-                              height: 1.5,
-                              letterSpacing: 2,
-                              fontSize: 16.0,
-                            ),
-                          ),
+                          Image.asset(getImage('drone_left')),
                         ],
                       ),
                     ),

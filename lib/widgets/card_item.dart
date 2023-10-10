@@ -37,12 +37,13 @@ class CardWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(4.0),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(5.0),
+                  padding: const EdgeInsets.all(4.0),
                   child: Center(
                     child: Text(
                       '${card.name}',
                       style: const TextStyle(
                         color: white,
+                        fontSize: 12,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -55,7 +56,7 @@ class CardWidget extends StatelessWidget {
                 Icon(
                   card.icon,
                   color: white,
-                  size: 35,
+                  size: 30,
                 ),
                 const SizedBox(
                   height: 5.0,
@@ -65,7 +66,7 @@ class CardWidget extends StatelessWidget {
                   style: const TextStyle(
                     color: white,
                     fontWeight: FontWeight.w300,
-                    fontSize: 25,
+                    fontSize: 20,
                   ),
                 ),
               ],

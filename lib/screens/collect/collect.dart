@@ -24,46 +24,65 @@ class CollectScreen extends StatelessWidget {
             resizeToAvoidBottomInset: false,
             body: Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.all(10.0),
-                      child: Text(
-                        'Collect \nData',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          height: 1.5,
-                          letterSpacing: 2,
-                          fontSize: 16.0,
-                        ),
-                      ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 20.0),
+                  const Text(
+                    'Welcome to the Data Collection Section!',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 20.0,
                     ),
-                    SizedBox(
-                      height: 50.0,
-                      width: 120,
-                      child: ElevatedButton(
-                        onPressed: _launchUrl,
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(secondClr),
-                          shape: MaterialStateProperty.all(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(15.0),
-                            ),
-                          ),
-                        ),
-                        child: const Text(
-                          'Visite website',
+                  ),
+                  const SizedBox(height: 20.0),
+                  const Text(
+                    'Help us to  collect valuable data for analysis.',
+                    style: TextStyle(fontSize: 16.0),
+                    textAlign: TextAlign.center,
+                  ),
+                  const SizedBox(height: 20.0),
+                  
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.all(10.0),
+                        child: Text(
+                          'Collect \nData',
                           style: TextStyle(
-                            color: Colors.white,
+                            fontWeight: FontWeight.w500,
+                            height: 1.5,
+                            letterSpacing: 2,
                             fontSize: 16.0,
                           ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
+                      SizedBox(
+                        height: 50.0,
+                        width: 120,
+                        child: ElevatedButton(
+                          onPressed: _launchUrl,
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(secondClr),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                            ),
+                          ),
+                          child: const Text(
+                            'Visite website',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
             ),
           ),
